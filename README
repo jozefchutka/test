@@ -1,0 +1,45 @@
+git scenario/workflow... lets have in repo:
+file1.txt (line1)
+file2.txt (line1)
+file3.txt (line1)
+
+1. user 1 create branch task1
+2. user switch to branch task1
+3. make sure you are in task1 branch (rightclick)
+4. user 1 actions:
+	delete file1.txt
+	add line in file2.txt (line2)
+	change line in file3.txt (line11)
+	add file4.txt (line1)
+
+5. add files + commit changes to local repository (task1 actions)
+6. repeat 4, 5 as many times as you want...
+7. user 1 FINISHED his work and is ready to commit his work
+8. user 1 checkout to master (notice files has changed)
+9. user 1 pull master
+10. user 1 merge from task1
+11. user 1 delete task1
+12. user 1 push to remote server
+
+---meanwhile---
+1. user 2 create and checkout branch task2 
+2. user 2 actions:
+	add line in file2.txt (line3)
+	change line in file3.txt (changed)
+3. user 2 commits changes (task2 actions)
+3. user 2 FINISHED his work and is ready to commit his work
+4. user 2 checkout to master
+5. user 2 pull master 9 (see the changes by user 1)
+6. user 2 merge from task2 and see conflicts
+7. user 2 resolves conflicts (commit) notice:
+		theirs - remote = files from task2
+		mine - local = files on remote repository
+	save file and resolve
+8. user 2 commits resolved files
+9. user 2 push
+10. user 2 deletes local task1
+
+---
+1. revert back using checkout to a branch
+2. branching according to jira tasks
+3. if you use fetch, you have to use pull (fetch does not moves head
