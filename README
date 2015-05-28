@@ -43,3 +43,4 @@ file3.txt (line1)
 1. revert back using checkout to a branch
 2. branching according to jira tasks
 3. if you use fetch, you have to use pull (fetch does not moves head
+
