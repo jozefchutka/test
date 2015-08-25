@@ -1,0 +1,8 @@
+{
+	"releases": [
+		{
+			"type": "git",
+			"haxelib": "haxelib.json"
+		}
+	]
+}
